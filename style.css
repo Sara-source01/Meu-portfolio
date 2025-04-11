@@ -1,0 +1,590 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: gainsboro;
+    color: #333;
+    line-height: 1.6;
+
+
+}
+
+.header {
+    background: #1a1a1a;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    align-items: last baseline;
+    padding-bottom: 20px;
+    padding-right: 50px;
+}
+
+
+.nav a {
+    color: #e9ecef;
+    border-bottom: 2px solid transparent;
+    transition: .5s;
+
+}
+
+.nav a:hover {
+    color: #e9ecef;
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+
+.grande-image {
+    height: 400px;
+    background: url('Imagens/caderno.webp') center/cover no-repeat;
+
+}
+
+.avatar1 {
+    position: relative;
+    height: 96px;
+    width: 96px;
+    margin-left: 50px;
+    margin-top: 15px;
+    margin-bottom: -40px;
+
+}
+
+
+.avatar2 {
+    position: relative;
+    height: 300px;
+    width: 300px;
+    margin-left: 70px;
+    margin-top: -150px;
+}
+
+
+.avatar_conteudo1 {
+    font-family: 'Helvetica Neue', sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans';
+    font-size: 58px;
+    color: #ffffff;
+    background-color: rgb(160, 95, 95);
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.avatar_conteudo2 {
+    font-family: 'Helvetica Neue', sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans';
+    font-size: 58px;
+    color: #ffffff;
+    background-color: cadetblue;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* para ajustar as medições de
+foto de forma cabe de círculo
+onde deve colocar a foto de avatar */
+.avatar_imagem {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+
+}
+
+.four {
+    position: relative;
+    height: 80px;
+    width: 80px;
+    margin-left: 70px;
+    margin-top: -65px;
+
+}
+
+
+.five {
+    position: relative;
+    height: 80px;
+    width: 80px;
+
+    margin-left: 186px;
+    margin-top: -55px;
+
+}
+
+.six {
+    position: relative;
+    height: 80px;
+    width: 80px;
+    margin-bottom: 20px;
+    margin-left: 300px;
+    margin-top: -105px;
+
+
+}
+
+.social a {
+
+    padding-left: 15px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 15px;
+    border-bottom: 2px solid transparent;
+    transition: .5s;
+}
+
+.social a:hover {
+    color: firebrick;
+    border: 2px solid darkorange;
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+
+}
+
+
+
+.apresentacao {
+    padding: 60px 20px;
+    text-align: center;
+    background: #e9ecef;
+}
+
+.apresentacao h1 {
+    font-size: 2.5em;
+    margin-bottom: 0;
+}
+
+.apresentacao h2 {
+    color: #6c757d;
+    font-style: italic;
+}
+
+.apresentacao h3{
+color: navy;
+font-size: 32px;    
+}
+
+#ola{
+   font-size: 18px;
+   text-align: center;
+}
+
+.apresentacao .social a {
+    text-decoration: none;
+}
+
+section {
+    padding: 50px 20px;
+}
+
+.formacao,
+.experiencia,
+.projetos,
+.contato, .listagem{
+    background: #f0f0f0;
+}
+
+.formacao,
+.experiencia,
+.projetos, .listagem, .apresentacao {
+    margin: 20px 100px;
+    border-left: 5px solid #f15a24;
+}
+.apresentacao{
+    border: 3px dotted darksalmon;
+    margin-top: 60px;
+}
+
+.apresentacao:hover{
+    border: 3px dashed deeppink;
+    border-radius: 10px;
+    
+}
+
+
+.listagem{
+    text-decoration: none;
+    padding: 30px;
+    color: crimson;
+}
+
+.list li a{
+    text-decoration: none;
+    color: #333;
+    border-bottom: 2px solid transparent;
+    transition: .5s;
+}
+
+.list li a:hover{
+    color: #D44638;
+    border-bottom: 2px solid darkkhaki;
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.item {
+    margin-bottom: 20px;
+}
+
+.projeto {
+    background: white;
+    padding: 20px;
+    margin: 10px;
+    display: inline-block;
+    width: 250px;
+    vertical-align: top;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+form input,
+form textarea {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+}
+
+form button {
+    padding: 10px 20px;
+    background: #333;
+    color: white;
+    border: none;
+}
+
+
+
+
+
+/* Seção de Projetos */
+.projetos {
+    padding: 60px 20px;
+    background-color: #e9eef5;
+    text-align: center;
+}
+
+.projetos h2 {
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+}
+
+.projetos-grid {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: white;
+    padding: 20px;
+    width: 280px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: left;
+}
+
+.imagem-projeto {
+    width: 100%;
+    height: 150px;
+    background-color: #cfcfcf;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.card p {
+    font-size: 0.9rem;
+    margin: 10px 0;
+    color: #555;
+}
+
+.botoes {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.botoes button {
+    flex: 1;
+    padding: 8px;
+    font-size: 0.85rem;
+    border: none;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.botoes button:hover {
+    background-color: #555;
+}
+
+/* Seção de Contato */
+.contato {
+    background-color: #1e1e1e;
+    color: darkblue;
+    padding: 60px 20px;
+}
+
+.contato-container {
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.texto-contato {
+    flex: 1;
+    min-width: 300px;
+}
+
+.texto-contato h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.texto-contato p {
+    margin-bottom: 15px;
+    font-size: 1rem;
+    color:black;
+}
+
+.redes-sociais {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+
+/* Formulário */
+.formulario {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.formulario input,
+.formulario textarea {
+    padding: 10px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+}
+
+.formulario textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+.formulario button {
+    padding: 10px;
+    font-size: 1rem;
+    background-color: #4f74ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.formulario button:hover {
+    background-color: #3752cc;
+}
+
+/* icon */
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.icon {
+    width: 45px;
+    height: 45px;
+    background-color: #333;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.icon:hover {
+    opacity: 0.8;
+}
+
+.github {
+    background-color: #333;
+}
+
+.gmail {
+    background-color: #D44638;
+    /* Vermelho estilo Gmail */
+}
+
+.linkedin {
+    background-color: #0077B5;
+}
+
+footer {
+    background-color: #1a1a1a;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 30px;
+  }
+
+
+  @media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .logo {
+        align-items: center;
+        padding-right: 0;
+    }
+
+    .nav {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 47px;
+    }
+
+    .nav a {
+        display: block;
+        width: 100%;
+        padding: 10px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.apresentacao {
+    padding: 60px 20px;
+    text-align: center;
+    background: #e9ecef;
+}
+
+.apresentacao h1 {
+    font-size: 2.5em;
+    margin-bottom: 0;
+}
+
+.apresentacao h2 {
+    color: #6c757d;
+    font-style: italic;
+}
+
+.apresentacao .social a {
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+section {
+    padding: 50px 20px;
+}
+
+.formacao,
+.experiencia,
+.projetos,
+.contato {
+    background: #f0f0f0;
+}
+
+.item {
+    margin-bottom: 20px;
+}
+
+.projeto {
+    background: white;
+    padding: 20px;
+    margin: 10px;
+    display: inline-block;
+    width: 250px;
+    vertical-align: top;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form input,
+form textarea {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+}
+
+form button {
+    padding: 10px 20px;
+    background: #333;
+    color: white;
+    border: none;
+}
