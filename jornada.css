@@ -106,3 +106,42 @@ body {
     margin-top: 40px;
   }
   
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      padding: 0 10px;
+    }
+  
+    main, aside {
+      width: 100%;
+    }
+  
+    .box img {
+      float: none;
+      display: block;
+      margin: 0 auto 15px auto;
+    }
+  
+    nav a {
+      display: block;
+      margin: 10px 0;
+      text-align: center;
+    }
+  
+    header {
+      padding: 15px 10px;
+    }
+  
+    aside {
+      padding: 15px;
+    }
+  
+    .box {
+      padding: 15px;
+    }
+  
+    footer {
+      padding: 10px;
+    }
+  }
+  
