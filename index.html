@@ -172,48 +172,54 @@
         <section class="projetos">
             <h2>Projetos</h2>
             <div class="projetos-grid">
-              
-              <div class="card">
-                <div class="imagem-projeto">
-                  <img src="Imagens/Receita de frango.avif" alt="Imagem do projeto">
-                </div>
-                <h3>Receita-de-frango-HTML</h3>
-                <p>Essa é uma web página de receita de frango assado com batatas.</p>
-                <div class="botoes">
-                  <a class="botao" href="https://github.com/Sara-source01/Receita-de-frango-HTML" target="_blank" rel="noopener noreferrer">REPOSITÓRIO</a>
-                  <a class="botao" href="https://sara-source01.github.io/Receita-de-frango-HTML/" target="_blank" rel="noopener noreferrer">VER DEMO</a>
-                </div>
-              </div>
-          
-              <div class="card">
-                <div class="imagem-projeto">
-                  <img src="Imagens/logo.avif" alt="Imagem do projeto">
-                </div>
-                <h3>Autonomia</h3>
-                <p>Uma página de teste usando HTML e CSS3.</p>
-                <div class="botoes">
-                  <a class="botao" href="https://github.com/Sara-source01/Autonomia.git" target="_blank" rel="noopener noreferrer">REPOSITÓRIO</a>
-                  <a class="botao" href="https://sara-source01.github.io/Autonomia/" target="_blank" rel="noopener noreferrer">VER DEMO</a>
-                </div>
-              </div>
-          
-              <div class="card">
-                <div class="imagem-projeto">
-                  <img src="Imagens/moça1.jpg" alt="Imagem do projeto">
-                </div>
-                <h3>Meu-portfolio</h3>
-                <p>Andamento do meu projeto, Imaginando como será no futuro.</p>
-                <div class="botoes">
-                  <a class="botao" href="https://github.com/Sara-source01/Meu-portfolio.git" target="_blank" rel="noopener noreferrer">REPOSITÓRIO</a>
-                  <a class="botao" href="https://sara-source01.github.io/Meu-portfolio/" target="_blank" rel="noopener noreferrer">VER DEMO</a>
-                </div>
-              </div>
-          
-            </div>
-          </section>
 
-         <!-- SEÇÃO DE CONTATO -->
-         <section class="contato">
+                <div class="card">
+                    <div class="imagem-projeto">
+                        <img src="Imagens/Receita de frango.avif" alt="Imagem do projeto">
+                    </div>
+                    <h3>Receita-de-frango-HTML</h3>
+                    <p>Essa é uma web página de receita de frango assado com batatas.</p>
+                    <div class="botoes">
+                        <a class="botao" href="https://github.com/Sara-source01/Receita-de-frango-HTML" target="_blank"
+                            rel="noopener noreferrer">REPOSITÓRIO</a>
+                        <a class="botao" href="https://sara-source01.github.io/Receita-de-frango-HTML/" target="_blank"
+                            rel="noopener noreferrer">VER DEMO</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="imagem-projeto">
+                        <img src="Imagens/logo.avif" alt="Imagem do projeto">
+                    </div>
+                    <h3>Autonomia</h3>
+                    <p>Uma página de teste usando HTML e CSS3.</p>
+                    <div class="botoes">
+                        <a class="botao" href="https://github.com/Sara-source01/Autonomia.git" target="_blank"
+                            rel="noopener noreferrer">REPOSITÓRIO</a>
+                        <a class="botao" href="https://sara-source01.github.io/Autonomia/" target="_blank"
+                            rel="noopener noreferrer">VER DEMO</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="imagem-projeto">
+                        <img src="Imagens/moça1.jpg" alt="Imagem do projeto">
+                    </div>
+                    <h3>Meu-portfolio</h3>
+                    <p>Andamento do meu projeto, Imaginando como será no futuro.</p>
+                    <div class="botoes">
+                        <a class="botao" href="https://github.com/Sara-source01/Meu-portfolio.git" target="_blank"
+                            rel="noopener noreferrer">REPOSITÓRIO</a>
+                        <a class="botao" href="https://sara-source01.github.io/Meu-portfolio/" target="_blank"
+                            rel="noopener noreferrer">VER DEMO</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SEÇÃO DE CONTATO -->
+        <section class="contato">
             <div class="contato-container">
                 <div class="texto-contato">
                     <h2>Contato</h2>
@@ -240,8 +246,6 @@
                             </a></div>
                     </div>
                 </div>
-
-  
                 <!-- JS adicionei id="form-contato" -->
                 <form class="formulario" id="form-contato">
                     <!-- adicionei id="nome" -->
@@ -265,7 +269,7 @@
         <section class="github-repos">
             <h2>Meus Repositórios no GitHub</h2>
             <p>Aqui estão meus repositórios públicos:</p>
-            <div  id="lista-repositorios" class="projetos-grid"></div>
+            <div id="lista-repositorios" class="projetos-grid"></div>
         </section>
 
         <footer class="footer">
@@ -273,7 +277,98 @@
                 <p>&copy; 2025 Meu projeto. Todos os direitos reservados.</p>
             </div>
         </footer>
-
 </body>
+<!-- JS adicionei <script></script> -->
+<script>
+    const formulario = document.getElementById('form-contato');
+    const errosDiv = document.getElementById('erros-formulario');
+
+    formulario.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        const nome = document.getElementById('nome').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const mensagem = document.getElementById('mensagem').value.trim();
+
+        let erros = [];
+
+        if (nome === '') erros.push('Preencha o nome.');
+        if (!/\S+@\S+\.\S+/.test(email)) erros.push('E-mail inválido.');
+        if (mensagem === '') erros.push('Digite uma mensagem.');
+
+        if (erros.length > 0) {
+            errosDiv.innerHTML = erros.join('<br>');
+        } else {
+            errosDiv.innerHTML = '';
+            alert('Formulário enviado com sucesso!');
+            formulario.reset();
+        }
+    });
+
+    // Função para buscar e exibir meus repositórios do GitHub
+    async function buscarRepositoriosGitHub(usuario) {
+        const container = document.getElementById('lista-repositorios');
+        container.innerHTML = '<p>Carregando repositórios...</p>';
+
+        try {
+            const resposta = await fetch(`https://api.github.com/users/${usuario}/repos`);
+            const repos = await resposta.json();
+
+            if (!resposta.ok) {
+                container.innerHTML = `<p>Erro: ${repos.message}</p>`;
+                return;
+            }
+
+            container.innerHTML = '';
+
+            if (repos.length === 0) {
+                container.innerHTML = '<p>Nenhum repositório encontrado.</p>';
+                return;
+            }
+
+            repos.forEach(repo => {
+                console.log(`🔹 Nome: ${repo.name}`);
+                console.log(`🧾 Full name: ${repo.full_name}`);
+                console.log(`📄 ${repo.description}`);
+                console.log(`🔐 Privado: ${repo.private}`);
+                console.log(`🌟 Estrelas: ${repo.stargazers_count}`);
+                console.log(`🍴 Forks: ${repo.forks_count}`);
+                console.log(`🍴 É fork: ${repo.fork}`);
+                console.log(`👤 Dono: ${repo.owner.login}`);
+                console.log(`🔗 URL do repositório: ${repo.html_url}`);
+                console.log(`📥 Download URL: ${repo.download_url || 'Não disponível'}`);
+                console.log(`📂 Forks URL: ${repo.forks_url}`);
+                console.log(`📤 Pulls URL: ${repo.pulls_url}`);
+                console.log(`🐛 Issues URL: ${repo.issues_url}`);
+                console.log(`📆 Milestones URL: ${repo.milestones_url || 'N/A'}`);
+                console.log(`🔔 Notificações URL: ${repo.notifications_url}`);
+                console.log(`🏷️ Labels URL: ${repo.labels_url}`);
+                console.log(`📦 Releases URL: ${repo.releases_url}`);
+                console.log(`🚀 Deployments URL: ${repo.deployments_url}`);
+
+            });
+
+
+            repos.forEach(repo => {
+                const card = document.createElement('div');
+                card.classList.add('repo-box');
+                card.innerHTML = `
+             <a href="${repo.html_url}" target="_blank"
+             title="${repo.name}"
+             aria-label="Abrir repositório ${repo.name} no GitHub">
+            ${repo.name}
+             </a>`;
+                container.appendChild(card);
+            });
+
+        } catch (erro) {
+            console.error('Erro ao buscar repositórios:', erro);
+            container.innerHTML = '<p>Erro ao buscar repositórios.</p>';
+        }
+    }
+
+    buscarRepositoriosGitHub('Sara-source01');
+
+</script>
 
 </html>
