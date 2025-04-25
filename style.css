@@ -23,7 +23,7 @@ body {
 .logo {
     display: flex;
     flex-direction: column;
-    align-items: last baseline;
+    align-items: flex-end;
     padding-bottom: 20px;
     padding-right: 50px;
 }
@@ -32,7 +32,8 @@ body {
 .nav a {
     color: #e9ecef;
     border-bottom: 2px solid transparent;
-    transition: .5s;
+    padding: 10px;
+    transition: .4s;
 
 }
 
@@ -40,7 +41,6 @@ body {
     color: #e9ecef;
     border: 2px solid white;
     border-radius: 10px;
-    padding: 10px;
     cursor: pointer;
 }
 
@@ -282,7 +282,6 @@ form button {
 
 
 
-
 /* Seção de Projetos */
 .projetos {
     padding: 60px 20px;
@@ -314,9 +313,19 @@ form button {
 .imagem-projeto {
     width: 100%;
     height: 150px;
+    border-radius: 10px;
     background-color: #cfcfcf;
     margin-bottom: 15px;
 }
+
+.imagem-projeto img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
 
 .card h3 {
     margin: 0;
@@ -324,30 +333,34 @@ form button {
 }
 
 .card p {
-    font-size: 0.9rem;
+    font-size: 1rem;
     margin: 10px 0;
     color: #555;
 }
 
+
+
 .botoes {
     display: flex;
     gap: 10px;
+    justify-content: center;
     margin-top: 10px;
-}
-
-.botoes button {
-    flex: 1;
-    padding: 8px;
-    font-size: 0.85rem;
-    border: none;
-    background-color: #333;
-    color: white;
-    cursor: pointer;
+  }
+  
+.botoes a {
+    text-decoration: none;
+    color: darksalmon;
+    border: sandybrown 2px solid;
+    background-color: #cfcfcf;
     border-radius: 5px;
+    width: 200px;
+    text-align: center;
+    font-weight: 700;
+    transition: .4s;
 }
 
-.botoes button:hover {
-    background-color: #555;
+.botao:hover {
+    background-color: slategray;
 }
 
 /* Seção de Contato */
@@ -531,6 +544,59 @@ form button {
     background-color: #0077B5;
 }
 
+/* JS adicionei esta seção */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* JS adicionei esta seção */
+.mensagem-erro {
+    color: red;
+    margin-top: 10px;
+}
+
+.repo-box {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    width: 280px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.repo-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+}
+
+.repo-box h3 {
+    margin: 0 0 10px;
+    font-size: 1.2rem;
+}
+
+.repo-box a {
+    text-decoration: none;
+    color: #0077cc;
+}
+
+.repo-box p {
+    font-size: 0.95rem;
+    color: #333;
+}
+
+
+
+
 footer {
     background-color: #1a1a1a;
     color: white;
@@ -538,7 +604,6 @@ footer {
     padding: 15px 0;
     margin-top: 30px;
 }
-
 
 @media (max-width: 768px) {
 
@@ -588,6 +653,18 @@ footer {
     .card {
         width: 90%;
         margin: 10px auto;
+    }
+
+    .imagem-projeto {
+        height: 230px;
+        margin-bottom: 10px;
+        border-radius: 8px;
+    }
+
+    .imagem-projeto img {
+        height: 230px;
+        border-radius: 8px;
+        margin-bottom: 8px;
     }
 
     .contato-container {
