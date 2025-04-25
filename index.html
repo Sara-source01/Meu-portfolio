@@ -8,7 +8,7 @@
     <meta name="description" content="Aprenda programação" />
     <meta name="author" content="Sara George" />
     <meta name="keywords"
-        content="HTML, CSS3, Coding, site,lógica de programação, git, github, repo local, repo remote, programação, full stack development" />
+        content="HTML, CSS3, Javascript, Coding, site,lógica de programação, git, github, repo local, repo remote, programação, full stack development" />
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
@@ -172,41 +172,48 @@
         <section class="projetos">
             <h2>Projetos</h2>
             <div class="projetos-grid">
-                <div class="card">
-                    <div class="imagem-projeto"></div>
-                    <h3>Título do Projeto</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur sadipscing elit...</p>
-                    <div class="botoes">
-                        <button>REPOSITÓRIO</button>
-                        <button>VER DEMO</button>
-                    </div>
+              
+              <div class="card">
+                <div class="imagem-projeto">
+                  <img src="Imagens/Receita de frango.avif" alt="Imagem do projeto">
                 </div>
-
-                <!-- Repita para outros projetos -->
-                <div class="card">
-                    <div class="imagem-projeto"></div>
-                    <h3>Título do Projeto</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur sadipscing elit...</p>
-                    <div class="botoes">
-                        <button>REPOSITÓRIO</button>
-                        <button>VER DEMO</button>
-                    </div>
+                <h3>Receita-de-frango-HTML</h3>
+                <p>Essa é uma web página de receita de frango assado com batatas.</p>
+                <div class="botoes">
+                  <a class="botao" href="https://github.com/Sara-source01/Receita-de-frango-HTML" target="_blank" rel="noopener noreferrer">REPOSITÓRIO</a>
+                  <a class="botao" href="https://sara-source01.github.io/Receita-de-frango-HTML/" target="_blank" rel="noopener noreferrer">VER DEMO</a>
                 </div>
-
-                <div class="card">
-                    <div class="imagem-projeto"></div>
-                    <h3>Título do Projeto</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur sadipscing elit...</p>
-                    <div class="botoes">
-                        <button>REPOSITÓRIO</button>
-                        <button>VER DEMO</button>
-                    </div>
+              </div>
+          
+              <div class="card">
+                <div class="imagem-projeto">
+                  <img src="Imagens/logo.avif" alt="Imagem do projeto">
                 </div>
+                <h3>Autonomia</h3>
+                <p>Uma página de teste usando HTML e CSS3.</p>
+                <div class="botoes">
+                  <a class="botao" href="https://github.com/Sara-source01/Autonomia.git" target="_blank" rel="noopener noreferrer">REPOSITÓRIO</a>
+                  <a class="botao" href="https://sara-source01.github.io/Autonomia/" target="_blank" rel="noopener noreferrer">VER DEMO</a>
+                </div>
+              </div>
+          
+              <div class="card">
+                <div class="imagem-projeto">
+                  <img src="Imagens/moça1.jpg" alt="Imagem do projeto">
+                </div>
+                <h3>Meu-portfolio</h3>
+                <p>Andamento do meu projeto, Imaginando como será no futuro.</p>
+                <div class="botoes">
+                  <a class="botao" href="https://github.com/Sara-source01/Meu-portfolio.git" target="_blank" rel="noopener noreferrer">REPOSITÓRIO</a>
+                  <a class="botao" href="https://sara-source01.github.io/Meu-portfolio/" target="_blank" rel="noopener noreferrer">VER DEMO</a>
+                </div>
+              </div>
+          
             </div>
-        </section>
+          </section>
 
-        <!-- SEÇÃO DE CONTATO -->
-        <section class="contato">
+         <!-- SEÇÃO DE CONTATO -->
+         <section class="contato">
             <div class="contato-container">
                 <div class="texto-contato">
                     <h2>Contato</h2>
@@ -217,25 +224,48 @@
                         <div class="icon"><a href="https://github.com/Sara-source01" target="_blank"
                                 class="icon github">
                                 <i class="fab fa-github"></i>
+                                <!-- JS adicionei <span class="sr-only">GitHub</span> -->
+                                <span class="sr-only">GitHub</span>
                             </a></div>
                         <div class="icon"><a href="sara.ebrahim.george@gmail.com" class="icon gmail">
                                 <i class="fas fa-envelope"></i>
+                                <!-- JS adicionei <span class="sr-only">E-mail</span> -->
+                                <span class="sr-only">E-mail</span>
                             </a></div>
                         <div class="icon"><a href="https://linkedin.com/in/sara-ebrahim-george-24759b324"
                                 target="_blank" class="icon linkedin">
                                 <i class="fab fa-linkedin-in"></i>
+                                <!-- JS adicionei <span class="sr-only">LinkedIn</span> -->
+                                <span class="sr-only">LinkedIn</span>
                             </a></div>
                     </div>
                 </div>
 
-                <form class="formulario">
-                    <input type="text" placeholder="NOME" required>
-                    <input type="email" placeholder="E-MAIL" required>
-                    <input type="text" placeholder="ASSUNTO">
-                    <textarea placeholder="MENSAGEM" required></textarea>
-                    <button type="submit">ENVIAR</button>
+  
+                <!-- JS adicionei id="form-contato" -->
+                <form class="formulario" id="form-contato">
+                    <!-- adicionei id="nome" -->
+                    <input type="text" id="nome" name="nome" placeholder="NOME" autocomplete="name" required>
+                    <!--JS adicionei id="email" -->
+                    <input type="email" id="email" name="email" placeholder="E-MAIL" autocomplete="email" required>
+                    <!--JS adicionei id="assunto" -->
+                    <input type="text" id="assunto" name="assunto" placeholder="ASSUNTO" autocomplete="off">
+                    <!--JS adicionei id="mensagem" -->
+                    <textarea id="mensagem" name="mensagem" placeholder="MENSAGEM" required
+                        autocomplete="off"></textarea>
+                    <button type="submit">Enviar</button>
+                    <!--JS adicionei <div id="erros-formulario" class="mensagem-erro"></div> -->
+                    <div id="erros-formulario" class="mensagem-erro"></div>
                 </form>
+
             </div>
+            <!-- JS adicionei esta seção -->
+        </section>
+        <!-- SEÇÃO DE REPOSITÓRIOS DO GITHUB -->
+        <section class="github-repos">
+            <h2>Meus Repositórios no GitHub</h2>
+            <p>Aqui estão meus repositórios públicos:</p>
+            <div  id="lista-repositorios" class="projetos-grid"></div>
         </section>
 
         <footer class="footer">
