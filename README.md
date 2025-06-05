@@ -35,6 +35,7 @@ Olá! Meu nome é **Sara Ebrahim George**, sou da Síria e moro no Rio de Janeir
 
 ## 📁 Estrutura de Pastas
 
+```plaintext
 📦 Meu-portfolio
 ├── Imagens/
 │   ├── moça1.jpg
@@ -53,9 +54,7 @@ Olá! Meu nome é **Sara Ebrahim George**, sou da Síria e moro no Rio de Janeir
 ├── jornada.html
 ├── index.html
 ├── README.md
-
-
-
+```
 ---
 
 
